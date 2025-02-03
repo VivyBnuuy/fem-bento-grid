@@ -2,7 +2,22 @@
 @use "../global/variables" as var;
 
 // Font sizes
+$very-large: util.rem(62);
+$large: util.rem(40);
+$medium: util.rem(32);
+$small: util.rem(18);
 
-// Shared sizes
+// Line heights
+$very-large-lh: 93.5%;
+$large-lh: 90%;
+$medium-lh: 87.5%;
+$small-lh: 111%;
+
+// Letter spacings
+$very-large-ls: util.rem(-3);
+$large-ls: util.rem(-2);
+$small-ls: util.rem(0);
 
 // Font weights
+$regular-fw: 400;
+$medium-fw: 500;
