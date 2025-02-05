@@ -32,6 +32,10 @@ body {
     &:nth-of-type(3) {
         padding: util.rem(32);
     }
+
+    &:nth-of-type(2) {
+        padding: util.rem(35) util.rem(32);
+    }
 }
 
 .contents {
@@ -48,6 +52,7 @@ body {
     background-color: var(--beige);
 
     max-width: util.rem(256);
+    max-height: util.rem(415);
 
     &__header {
         font-size: fonts.$large;
@@ -69,7 +74,7 @@ body {
         justify-content: center;
         align-content: center;
 
-        max-height: fit-content;
+        max-height: util.rem(60);
 
         background-color: var(--yellow);
 
@@ -79,8 +84,11 @@ body {
         font-weight: fonts.$bold-fw;
         font-size: fonts.$small2;
 
-        margin: util.rem(24) 0 util.rem(83) 0;
+        margin: 0 0 util.rem(50) 0;
         padding: util.rem(17) util.rem(26);
+
+        pointer-events: none;
+        user-select: none;
 
         &__star {
             align-self: center;
@@ -105,10 +113,54 @@ body {
 
 .card2 {
     grid-area: 1 / 2 / 2 / 4;
+    justify-items: center;
+
+    max-width: util.rem(544);
 
     background-color: var(--purple-dark);
 
     color: var(--white);
+
+    &__header {
+        font-size: fonts.$very-large;
+        line-height: fonts.$very-large-lh;
+        letter-spacing: fonts.$very-large-ls;
+        font-weight: fonts.$medium-fw;
+        text-align: center;
+
+        padding: util.rem(29) 0 util.rem(26) 0;
+
+        &__span1 {
+            color: var(--yellow);
+        }
+
+        &__span2 {
+            font-style: italic;
+        }
+    }
+
+    &__stars-container {
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &__star {
+        display: inline-block; 
+
+        width: util.rem(26);
+        height: util.rem(26);
+
+        margin: 0 util.rem(5);
+    }
+
+    &__span1 {
+        font-size: fonts.$small;
+        line-height: fonts.$small-lh;
+        letter-spacing: fonts.$small-ls;
+        font-weight: fonts.$regular-fw;
+
+        margin: util.rem(6) 0 util.rem(26) 0;
+    }
 }
 
 .card3 {
