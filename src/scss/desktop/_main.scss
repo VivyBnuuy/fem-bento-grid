@@ -166,7 +166,174 @@ body {
 .card3 {
     grid-area: 1 / 4 / 3 / 5;
 
+    max-width: util.rem(256);
+
+    overflow: hidden;
+
     background-color: var(--purple-light);
+
+    transition: all 0.5s ease-in-out;
+
+    &__header {
+        max-width: util.rem(192);
+
+        font-size: fonts.$medium;
+        line-height: fonts.$medium-lh;
+        letter-spacing: fonts.$large-ls;
+        font-weight: fonts.$medium-fw;
+
+        margin-top: util.rem(18);
+    }
+
+    &__graph {
+        display: grid;
+
+        min-width: max-content;
+
+        background-color: var(--white);
+
+        border-radius: util.rem(16);
+
+        margin: util.rem(26) 0;
+        padding: util.rem(20) util.rem(22);
+
+        &__label {
+            font-size: fonts.$small2;
+            line-height: fonts.$graph-lh;
+            letter-spacing: fonts.$graph-ls;
+            font-weight: fonts.$medium-fw;
+
+            border-bottom: util.rem(1) solid var(--gray-light);
+
+            padding: 0 0 util.rem(10) 0;
+        }
+
+        &__days {
+            display: grid;
+            grid-template: auto / repeat(7, auto);
+            align-items: center;
+            justify-items: center;
+
+            font-size: fonts.$very-small;
+            color: var(--gray-dark);
+
+            margin: util.rem(17) 0 0 0;
+
+            &-day {
+                margin: 0 0 0 util.rem(18);
+
+                transition: font-weight 0.1s ease-in-out;
+
+                &:nth-of-type(1) {
+                    font-weight: fonts.$semibold-fw;
+                    color: var(--red-dark);
+                    
+                    background-color: var(--red-light);
+    
+                    padding: util.rem(3.5) util.rem(9);
+                    margin: 0 0;
+    
+                    border-radius: util.rem(16);
+                }
+            }
+        }
+
+        &__active {
+            grid-area: 1 / 6 / 2 / 8;
+
+            min-width: max-content;
+
+            font-size: fonts.$very-small;
+            font-weight: fonts.$semibold-fw;
+            color: var(--green-dark);
+
+            background-color: var(--green-light);
+
+            padding: util.rem(3.5) util.rem(9);
+            margin: 0 0 0 util.rem(6);
+
+            border-radius: util.rem(16);
+
+            &-cont {
+                display: grid;
+                grid-template: max-content / repeat(8, util.rem(22));
+                column-gap: util.rem(22);
+
+                margin: util.rem(14) 0 util.rem(4) 0;
+            }
+        }
+
+        &__bars {
+            display: grid;
+            grid-template: auto / repeat(8, util.rem(22));
+            column-gap: util.rem(22);
+
+            margin: 0 0 util.rem(11) 0;
+
+            &__bar {
+                align-self: end;
+
+                background-color: var(--purple-dark);
+
+                border-radius: util.rem(16);
+
+                &:nth-of-type(1) {
+                    height: util.rem(40);
+                }
+
+                &:nth-of-type(2) {
+                    height: util.rem(55);
+                }
+
+                &:nth-of-type(3) {
+                    height: util.rem(100);
+                }
+
+                &:nth-of-type(4) {
+                    height: util.rem(80);
+                }
+
+                &:nth-of-type(5) {
+                    height: util.rem(65);
+                }
+
+                &:nth-of-type(6) {
+                    height: util.rem(75);
+                }
+
+                &:nth-of-type(7) {
+                    height: util.rem(120);
+                }
+
+                &:nth-of-type(8) {
+                    height: util.rem(65);
+                }
+            }
+        }
+
+        &__times {
+            display: grid;
+            grid-template: auto / repeat(8, util.rem(22));
+            column-gap: util.rem(22);
+            justify-items: center;
+
+            &-time {   
+                font-size: fonts.$very-small;
+                color: var(--gray-dark);
+            }
+        }
+    }
+
+    &__paragraph {
+        max-width: util.rem(192);
+
+        margin-bottom: util.rem(18);
+
+        font-size: fonts.$small;
+        line-height: fonts.$small-lh;
+        letter-spacing: fonts.$small-ls;
+        font-weight: fonts.$regular-fw;
+    }
 }
 
 .card4 {
@@ -174,7 +341,10 @@ body {
 
     background-color: var(--yellow);
 
-    margin-top: util.rem(210);
+    font-size: fonts.$large;
+    line-height: fonts.$large-lh;
+    letter-spacing: fonts.$large-ls;
+    font-weight: fonts.$medium-fw;
 }
 
 .card5 {
