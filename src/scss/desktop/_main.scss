@@ -338,6 +338,12 @@ body {
 
 .card4 {
     grid-area: 2 / 1 / 4 / 2;
+    align-self: end;
+
+    margin-top: util.rem(91);
+
+    width: util.rem(256);
+    height: util.rem(434);
 
     background-color: var(--yellow);
 
@@ -345,6 +351,114 @@ body {
     line-height: fonts.$large-lh;
     letter-spacing: fonts.$large-ls;
     font-weight: fonts.$medium-fw;
+
+    &__header {
+        max-width: 6ch;
+        margin-bottom: util.rem(60);
+    }
+
+    &__arrow {
+        height: util.rem(28);
+        width: util.rem(28);
+    }
+
+    &__chat-cont {
+        position: relative;
+
+        width: max-content;
+        height: max-content;
+
+        background-color: var(--white);
+
+        border-radius: util.rem(16);
+
+        padding: util.rem(16);
+
+        font-size: fonts.$very-small2;
+        line-height: fonts.$graph-lh;
+        letter-spacing: fonts.$small-ls;
+        font-weight: fonts.$regular-fw;
+
+        &__arrow-cont {
+            position: absolute;
+            top: util.rem(45);
+            left: util.rem(135);
+
+            width: max-content;
+
+            background-color: var(--white);
+
+            padding: util.rem(16);
+
+            border-radius: 100%;
+
+            &__inner {
+                width: max-content;
+
+                background-color: var(--yellow);
+
+                padding: util.rem(12);
+
+                border-radius: 100%;
+            }
+        }
+
+        &__message {
+            display: grid;
+            grid-template: auto / repeat(2, max-content);
+            grid-column-gap: util.rem(6);
+            
+            border-radius: util.rem(24);
+        }
+
+        &__message1 {
+            margin-bottom: util.rem(24);
+
+            &__text {
+                background-color: var(--violet);
+            
+                text-align: right;
+
+                width: util.rem(135);
+            
+                border-radius: util.rem(16);
+    
+                padding: util.rem(8) util.rem(16);
+            }
+
+            &__img {
+                width: util.rem(34);
+                height: util.rem(34);
+            }
+        }
+
+        &__message2 {
+            &__text {
+                background-color: var(--off-yellow);
+
+                width: util.rem(135);
+            
+                border-radius: util.rem(16);
+    
+                padding: util.rem(8) util.rem(16);
+            }
+
+            &__img-cont {
+                height: max-content;
+
+                background-color: var(--purple-light);
+
+                padding: util.rem(8);
+
+                border-radius: 100%;
+
+                &__img {
+                    width: util.rem(18);
+                    height: util.rem(18);
+                }
+            }
+        }
+    }
 }
 
 .card5 {

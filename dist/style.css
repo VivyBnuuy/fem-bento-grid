@@ -12,6 +12,8 @@
   --red-light: rgb(255, 229, 231);
   --green-dark: rgb(14, 128, 59);
   --green-light: rgb(218, 255, 233);
+  --violet: rgb(255, 237, 237);
+  --off-yellow: rgb(252, 235, 209);
 }
 
 .card3__graph__days-day:hover {
@@ -308,11 +310,91 @@ body {
 
 .card4 {
   grid-area: 2/1/4/2;
+  align-self: end;
+  margin-top: 5.6875rem;
+  width: 16rem;
+  height: 27.125rem;
   background-color: var(--yellow);
   font-size: 2.5rem;
   line-height: 90%;
   letter-spacing: -0.125rem;
   font-weight: 500;
+}
+.card4__header {
+  max-width: 6ch;
+  margin-bottom: 3.75rem;
+}
+.card4__arrow {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+.card4__chat-cont {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 0.75rem;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  font-weight: 400;
+}
+.card4__chat-cont__arrow-cont {
+  position: absolute;
+  top: 2.8125rem;
+  left: 8.4375rem;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 100%;
+}
+.card4__chat-cont__arrow-cont__inner {
+  width: -moz-max-content;
+  width: max-content;
+  background-color: var(--yellow);
+  padding: 0.75rem;
+  border-radius: 100%;
+}
+.card4__chat-cont__message {
+  display: grid;
+  grid-template: auto/repeat(2, max-content);
+  grid-column-gap: 0.375rem;
+  border-radius: 1.5rem;
+}
+.card4__chat-cont__message1 {
+  margin-bottom: 1.5rem;
+}
+.card4__chat-cont__message1__text {
+  background-color: var(--violet);
+  text-align: right;
+  width: 8.4375rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+.card4__chat-cont__message1__img {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+.card4__chat-cont__message2__text {
+  background-color: var(--off-yellow);
+  width: 8.4375rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+.card4__chat-cont__message2__img-cont {
+  height: -moz-max-content;
+  height: max-content;
+  background-color: var(--purple-light);
+  padding: 0.5rem;
+  border-radius: 100%;
+}
+.card4__chat-cont__message2__img-cont__img {
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
 .card5 {
