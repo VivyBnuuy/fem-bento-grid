@@ -17,7 +17,7 @@ body {
 
     height: 100vh;
 
-    padding: util.rem(80) util.rem(160);
+    padding: util.rem(0) util.rem(32);
 }
 
 .card {
@@ -266,7 +266,7 @@ body {
         &__bars {
             display: grid;
             grid-template: auto / repeat(8, util.rem(22));
-            column-gap: util.rem(22);
+            column-gap: util.rem(20);
 
             margin: 0 0 util.rem(11) 0;
 
@@ -314,7 +314,7 @@ body {
         &__times {
             display: grid;
             grid-template: auto / repeat(8, util.rem(22));
-            column-gap: util.rem(22);
+            column-gap: util.rem(20);
             justify-items: center;
 
             &-time {   
@@ -655,9 +655,60 @@ body {
 }
 
 .card8 {
+    display: grid;
+    grid-template: auto / max-content util.rem(257);
+    grid-column-gap: util.rem(12);
+    align-content: center;
+    align-items: center;
     grid-area: 3 / 3 / 4 / 5;
 
     background-color: var(--purple-dark);
 
     color: var(--white);
+
+
+    &__arrow {
+        height: util.rem(23);
+        width: util.rem(23);
+    }
+
+    &__graph-container {
+        background-color: var(--white);
+
+        border-radius: util.rem(16);
+
+        padding: util.rem(28) util.rem(26);
+
+        &__span1 {
+            font-size: fonts.$very-small;
+            line-height: fonts.$auto-lh;
+            letter-spacing: fonts.$followers-ls;
+            font-weight: fonts.$regular-fw;
+            color: var(--gray-dark);
+        }
+
+        &__followers {
+            font-size: fonts.$medium2;
+            line-height: fonts.$large-lh;
+            letter-spacing: fonts.$socials-ls;
+            font-weight: fonts.$medium-fw;
+            color: var(--black);
+
+            &-percent {
+                font-size: fonts.$very-small2;
+                line-height: fonts.$graph-lh;
+                letter-spacing: fonts.$graph-ls;
+                font-weight: fonts.$medium-fw;
+                color: var(--green-dark);
+            }
+        }
+    }
+
+    &__header {
+        grid-area: 1 / 2 / 2 / 3;
+
+        font-size: fonts.$large;
+        line-height: fonts.$large-lh;
+        font-weight: fonts.$medium-fw;
+    }
 }
