@@ -382,13 +382,13 @@ body {
         &__arrow-cont {
             position: absolute;
             top: util.rem(45);
-            left: util.rem(135);
+            left: util.rem(132);
 
             width: max-content;
 
             background-color: var(--white);
 
-            padding: util.rem(16);
+            padding: util.rem(18);
 
             border-radius: 100%;
 
@@ -462,7 +462,82 @@ body {
 }
 
 .card5 {
+    grid-template: max-content / auto;
+
     background-color: var(--white);
+
+    max-width: util.rem(256);
+    max-height: util.rem(247);
+
+    overflow-x: hidden;
+
+    &__header {
+        max-width: 8ch;
+
+        margin-top: util.rem(22);
+
+        font-size: fonts.$medium;
+        line-height: fonts.$medium-lh;
+        letter-spacing: fonts.$large-ls;
+        font-weight: fonts.$medium-fw;
+    }
+
+    &__socials-container {
+        display: grid;
+        grid-template: max-content / repeat(2, auto);
+        grid-column-gap: util.rem(14);
+
+        width: max-content;
+
+        &__1, &__2 {
+            display: grid;
+            grid-template: repeat(2, max-content) / repeat(2, max-content);
+            grid-column-gap: util.rem(8);
+            align-content: center;
+            align-items: center;
+
+            width: max-content;
+
+            background-color: var(--white);
+
+            padding: util.rem(12) util.rem(24) util.rem(12) util.rem(12);
+
+            border-radius: util.rem(32);
+
+            filter: drop-shadow(util.rem(-10) util.rem(10) util.rem(25) rgba(0, 0, 0, 0.05));
+
+            &__name {
+                font-size: fonts.$small3;
+                line-height: fonts.$large-lh;
+                letter-spacing: fonts.$socials-ls;
+                font-weight: fonts.$medium-fw;
+            }
+
+            &__followers {
+                font-size: fonts.$very-small2;
+                line-height: fonts.$auto-lh;
+                letter-spacing: fonts.$followers-ls;
+                font-weight: fonts.$regular-fw;
+                color: var(--gray-dark);
+            }
+
+            &__img-cont {
+                grid-area: 1 / 1 / 3 / 2;
+                width: max-content;
+
+                background-color: var(--yellow);
+
+                padding: util.rem(9);
+
+                border-radius: 100%;
+
+                &__img {
+                    width: util.rem(22);
+                    height: util.rem(22);
+                }
+            }
+        }
+    }
 }
 
 .card6 {
@@ -470,7 +545,49 @@ body {
 }
 
 .card7 {
+    display: grid;
+    grid-template: repeat(3, auto) / auto;
+
+    height: util.rem(247);
+
     background-color: var(--white);
+
+    &__header {
+        grid-area: 1 / 1 / 2 / 2;
+
+        font-size: fonts.$very-large;
+        line-height: fonts.$very-large-lh;
+        letter-spacing: fonts.$very-large-ls;
+        font-weight: fonts.$medium-fw;
+    }
+
+    &__span1 {
+        grid-area: 2 / 1 / 3 / 2;
+
+        margin-top: util.rem(8);
+        margin-bottom: util.rem(30);
+
+        font-size: fonts.$small;
+        line-height: fonts.$small-lh;
+        letter-spacing: fonts.$small-ls;
+        font-weight: fonts.$regular-fw;
+    }
+
+    &__images-cont {
+        display: grid;
+        grid-template: auto / repeat(3, auto);
+
+        grid-area: 3 / 1 / 4 / 2;
+
+        &__img {
+            min-width: fit-content;
+
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
+                margin-left: util.rem(-40);
+            }
+        }
+    }
 }
 
 .card8 {

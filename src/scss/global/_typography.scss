@@ -7,6 +7,7 @@ $large: util.rem(40);
 $medium: util.rem(32);
 $small: util.rem(18);
 $small2: util.rem(19.2);
+$small3: util.rem(16);
 $very-small: util.rem(14);
 $very-small2: util.rem(12);
 
@@ -16,12 +17,15 @@ $large-lh: 90%;
 $medium-lh: 87.5%;
 $small-lh: 111%;
 $graph-lh: 150%;
+$auto-lh: auto;
 
 // Letter spacings
 $very-large-ls: util.rem(-3);
 $large-ls: util.rem(-2);
 $small-ls: util.rem(0);
 $graph-ls: -5%;
+$socials-ls: -6%;
+$followers-ls: -3%;
 
 // Font weights
 $regular-fw: 400;
