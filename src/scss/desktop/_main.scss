@@ -541,7 +541,71 @@ body {
 }
 
 .card6 {
+    display: grid;
+    grid-template: repeat(2, max-content) / auto;
+
+    max-width: util.rem(256);
+    max-height: util.rem(247);
+
+    overflow-y: hidden;
+
     background-color: var(--yellow);
+
+    &__header {
+        font-size: fonts.$medium;
+        line-height: fonts.$medium-lh;
+        letter-spacing: fonts.$large-ls;
+        font-weight: fonts.$medium-fw;
+    }
+
+    &__calendar-container {
+        margin-top: util.rem(20);
+
+        &__top-bar {
+            display: grid;
+            grid-template: auto / repeat(2, auto);
+
+            color: var(--white);
+            font-weight: fonts.$regular-fw;
+            letter-spacing: fonts.$graph-ls;
+
+            background-color: var(--purple-dark);
+
+            padding: util.rem(8) util.rem(12);
+
+            border-radius: util.rem(8) util.rem(8) 0 0;
+
+            &__week {
+                justify-self: center;
+                align-self: center;
+
+                font-size: fonts.$very-small;
+            }
+        }
+
+        &__checks {
+            display: grid;
+            grid-template: repeat(4, max-content) / repeat(4, 1fr);
+            grid-row-gap: util.rem(18);
+            justify-items: center;
+
+            padding: util.rem(18) 0;
+
+            background-color: var(--white);
+
+            border-radius: 0 0 util.rem(8) util.rem(8);
+
+            &__check-img {
+                height: util.rem(20);
+                width: util.rem(20);
+            }
+
+            &__square-img {
+                height: util.rem(23);
+                width: util.rem(23);
+            }
+        }
+    }
 }
 
 .card7 {
