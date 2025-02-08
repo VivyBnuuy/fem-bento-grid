@@ -16,8 +16,6 @@ body {
     justify-items: center;
 
     height: 100vh;
-
-    padding: util.rem(0) util.rem(32);
 }
 
 .card {
@@ -44,6 +42,8 @@ body {
     grid-gap: util.rem(32);
 
     max-width: util.rem(1440);
+
+    padding: util.rem(32);
 }
 
 .card1 {
@@ -656,16 +656,19 @@ body {
 
 .card8 {
     display: grid;
-    grid-template: auto / max-content util.rem(257);
-    grid-column-gap: util.rem(12);
+    grid-template: auto / max-content auto;
+    grid-column-gap: util.rem(36);
     align-content: center;
     align-items: center;
     grid-area: 3 / 3 / 4 / 5;
 
+    max-width: util.rem(544);
+
+    position: relative;
+
     background-color: var(--purple-dark);
 
     color: var(--white);
-
 
     &__arrow {
         height: util.rem(23);
@@ -673,6 +676,8 @@ body {
     }
 
     &__graph-container {
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(2, auto);
         background-color: var(--white);
 
         border-radius: util.rem(16);
@@ -680,14 +685,19 @@ body {
         padding: util.rem(28) util.rem(26);
 
         &__span1 {
+            grid-area: 1 / 1 / 2 / 3;
             font-size: fonts.$very-small;
             line-height: fonts.$auto-lh;
             letter-spacing: fonts.$followers-ls;
             font-weight: fonts.$regular-fw;
             color: var(--gray-dark);
+
+            margin-bottom: util.rem(4);
         }
 
         &__followers {
+            grid-area: 2 / 1 / 3 / 2;
+
             font-size: fonts.$medium2;
             line-height: fonts.$large-lh;
             letter-spacing: fonts.$socials-ls;
@@ -695,17 +705,141 @@ body {
             color: var(--black);
 
             &-percent {
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                justify-self: end;
+                grid-area: 2 / 2 / 3 / 3;
+
+                max-width: max-content;
+
                 font-size: fonts.$very-small2;
                 line-height: fonts.$graph-lh;
                 letter-spacing: fonts.$graph-ls;
                 font-weight: fonts.$medium-fw;
                 color: var(--green-dark);
+    
+                background-color: var(--green-light);
+    
+                padding: util.rem(2) util.rem(6);
+                margin: 0 0 0 util.rem(6);
+    
+                border-radius: util.rem(16);
+            }
+
+            &-small-cont {
+                display: grid;
+                grid-template: repeat(2, auto) / repeat(3, auto);
+                grid-column-gap: util.rem(8);
+                align-content: center;
+                align-items: center;
+
+                position: absolute;
+                top: util.rem(160);
+                left: util.rem(65);
+
+                width: max-content;
+
+                border-radius: util.rem(32);
+
+                padding: util.rem(12);
+
+                background-color: var(--white);
+
+                &__img-cont {
+                    grid-area: 1 / 1 / 3 / 2;
+                    max-width: max-content;
+
+                    background-color: var(--yellow);
+
+                    padding: util.rem(10);
+
+                    border-radius: 100%;
+                }
+
+                &__span1 {
+                    font-size: fonts.$very-small2;
+                    line-height: fonts.$auto-lh;
+                    letter-spacing: fonts.$followers-ls;
+                    font-weight: fonts.$regular-fw;
+                    color: var(--gray-dark);
+                }
+
+                &__span2 {
+                    grid-area: 2 / 2 / 3 / 3;
+
+                    font-size: fonts.$small2;
+                    line-height: fonts.$large-lh;
+                    letter-spacing: fonts.$socials-ls;
+                    font-weight: fonts.$medium-fw;
+                    color: var(--black);
+                }
+
+                &__percent {
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    grid-area: 2 / 3 / 3 / 4;
+    
+                    min-width: max-content;
+    
+                    font-size: fonts.$very-small2;
+                    line-height: fonts.$graph-lh;
+                    letter-spacing: fonts.$graph-ls;
+                    font-weight: fonts.$medium-fw;
+                    color: var(--green-dark);
+        
+                    background-color: var(--green-light);
+        
+                    padding: util.rem(2) util.rem(6);
+                    margin: 0 0 0 util.rem(6);
+        
+                    border-radius: util.rem(16);
+                }
+            }
+        }
+
+        &__bars-container {
+            display: grid;
+            grid-template: auto / repeat(5, util.rem(18));
+            grid-area: 3 / 1 / 4 / 3;
+            grid-column-gap: util.rem(14);
+            justify-content: center;
+
+            margin-top: util.rem(14);
+
+            &__bar {
+                align-self: end;
+                background-color: var(--purple-dark);
+                border-radius: 1rem;
+
+                &:nth-of-type(1) {
+                    height: util.rem(40);
+                }
+
+                &:nth-of-type(2) {
+                    height: util.rem(55);
+                }
+
+                &:nth-of-type(3) {
+                    height: util.rem(60);
+                }
+
+                &:nth-of-type(4) {
+                    height: util.rem(70);
+                }
+
+                &:nth-of-type(5) {
+                    height: util.rem(70);
+                }
             }
         }
     }
 
     &__header {
         grid-area: 1 / 2 / 2 / 3;
+
+        min-width: 257px;
 
         font-size: fonts.$large;
         line-height: fonts.$large-lh;
