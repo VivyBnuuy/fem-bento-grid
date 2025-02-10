@@ -51,3 +51,17 @@ $small-t-lh : util.rem(20);
 
 // Letter spacings
 $very-large-t-ls: 0;
+
+
+
+// ----------------------------- Mobile variables
+// Font sizes
+$very-large-m: util.rem(46);
+$medium-m: util.rem(26);
+
+// Line heights
+$very-large-m-lh: util.rem(42);
+$medium-m-lh: util.rem(24);
+
+// Letter spacings
+$very-large-m-ls: -4%;
