@@ -657,7 +657,7 @@ body {
 .card8 {
     display: grid;
     grid-template: auto / max-content auto;
-    grid-column-gap: util.rem(36);
+    grid-column-gap: util.rem(43);
     align-content: center;
     align-items: center;
     grid-area: 3 / 3 / 4 / 5;
@@ -683,6 +683,8 @@ body {
         border-radius: util.rem(16);
 
         padding: util.rem(28) util.rem(26);
+
+        margin-top: util.rem(-10);
 
         &__span1 {
             grid-area: 1 / 1 / 2 / 3;
@@ -735,7 +737,7 @@ body {
                 align-items: center;
 
                 position: absolute;
-                top: util.rem(160);
+                top: util.rem(155);
                 left: util.rem(65);
 
                 width: max-content;

@@ -1,6 +1,8 @@
 @use "../util/functions" as util;
 @use "../global/variables" as var;
 
+
+// ----------------------------- Desktop variables
 // Font sizes
 $very-large: util.rem(62);
 $large: util.rem(40);
@@ -33,3 +35,19 @@ $regular-fw: 400;
 $medium-fw: 500;
 $semibold-fw: 600;
 $bold-fw: 700;
+
+
+
+// ----------------------------- Tablet variables
+// Font sizes
+$very-large-t: util.rem(54);
+$medium-t: util.rem(36);
+
+// Line heights
+$very-large-t-lh: util.rem(48);
+$large-t-lh: util.rem(30);
+$medium-t-lh: util.rem(28);
+$small-t-lh : util.rem(20);
+
+// Letter spacings
+$very-large-t-ls: 0;
