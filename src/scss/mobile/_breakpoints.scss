@@ -2,7 +2,7 @@
 @use "../global/variables" as var;
 @use "../global/typography" as fonts;
 
-@media screen and (max-width: 752px) {
+@media screen and (max-width: 752px) {    
     .contents {
         display: grid;
         grid-template: repeat(8, auto) / util.rem(343);
@@ -64,6 +64,10 @@
 
             &__label {
                 font-size: fonts.$small3;
+            }
+
+            &__active {
+                margin-left: util.rem(1);
             }
 
             &__days {

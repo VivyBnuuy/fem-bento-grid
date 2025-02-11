@@ -2,30 +2,6 @@
 @use "../global/variables" as var;
 @use "../global/typography" as fonts;
 
-@property --num {
-    syntax: '<integer>';
-    initial-value: 3495;
-    inherits: false;
-}
-
-@property --num2 {
-    syntax: '<integer>';
-    initial-value: 40697;
-    inherits: false;
-}
-
-@keyframes followersCount1 {
-    0% {
-        --num: 3495;
-        --num2: 40697;
-    }
-
-    100% {
-        --num: 20620;
-        --num2: 89533;
-    }
-}
-
 body {
     background-color: var(--off-white);
 
@@ -62,10 +38,10 @@ body {
 
 .contents {
     display: grid;
-    grid-template: repeat(3, auto) / repeat(4, auto);
+    grid-template: repeat(3, auto) / repeat(4, 1fr);
     grid-gap: util.rem(32);
 
-    max-width: util.rem(1440);
+    max-width: util.rem(1184);
 
     padding: util.rem(32);
 }
@@ -191,11 +167,13 @@ body {
     grid-area: 1 / 4 / 3 / 5;
 
     position: relative;
-    left: 0;
 
     max-width: util.rem(256);
+    max-height: util.rem(603);
 
     overflow: hidden;
+
+    transition: all 0.5s;
 
     background-color: var(--purple-light);
 
@@ -264,7 +242,7 @@ body {
         }
 
         &__active {
-            grid-area: 1 / 6 / 2 / 8;
+            grid-area: 1 / 2 / 2 / 4;
 
             min-width: max-content;
 
@@ -275,7 +253,7 @@ body {
             background-color: var(--green-light);
 
             padding: util.rem(3.5) util.rem(9);
-            margin: 0 0 0 util.rem(6);
+            margin: 0 0 0 util.rem(9);
 
             border-radius: util.rem(16);
 
@@ -292,6 +270,9 @@ body {
             display: grid;
             grid-template: auto / repeat(8, util.rem(22));
             column-gap: util.rem(20);
+            justify-content: center;
+
+            height: util.rem(140);
 
             margin: 0 0 util.rem(11) 0;
 
@@ -303,35 +284,35 @@ body {
                 border-radius: util.rem(16);
 
                 &:nth-of-type(1) {
-                    height: util.rem(40);
+                    height: util.rem(50);
                 }
 
                 &:nth-of-type(2) {
-                    height: util.rem(55);
+                    height: util.rem(60);
                 }
 
                 &:nth-of-type(3) {
-                    height: util.rem(100);
+                    height: util.rem(140);
                 }
 
                 &:nth-of-type(4) {
-                    height: util.rem(80);
+                    height: util.rem(100);
                 }
 
                 &:nth-of-type(5) {
-                    height: util.rem(65);
-                }
-
-                &:nth-of-type(6) {
-                    height: util.rem(75);
-                }
-
-                &:nth-of-type(7) {
                     height: util.rem(120);
                 }
 
+                &:nth-of-type(6) {
+                    height: util.rem(70);
+                }
+
+                &:nth-of-type(7) {
+                    height: util.rem(55);
+                }
+
                 &:nth-of-type(8) {
-                    height: util.rem(65);
+                    height: util.rem(85);
                 }
             }
         }
@@ -340,7 +321,7 @@ body {
             display: grid;
             grid-template: auto / repeat(8, util.rem(22));
             column-gap: util.rem(20);
-            justify-items: center;
+            justify-content: center;
 
             &-time {   
                 font-size: fonts.$very-small;
@@ -488,6 +469,7 @@ body {
 
 .card5 {
     grid-template: max-content / auto;
+    grid-area: 2/2/3/3;
 
     background-color: var(--white);
 
@@ -575,6 +557,7 @@ body {
 .card6 {
     display: grid;
     grid-template: repeat(2, max-content) / auto;
+    grid-area: 2/3/3/4;
 
     max-width: util.rem(256);
     max-height: util.rem(247);
@@ -643,6 +626,7 @@ body {
 .card7 {
     display: grid;
     grid-template: repeat(3, auto) / auto;
+    grid-area: 3/2/4/3;
 
     height: util.rem(247);
 
@@ -738,7 +722,8 @@ body {
             font-weight: fonts.$medium-fw;
             color: var(--black);
 
-            animation: ease-in-out 3s followersCount1 forwards;
+            animation: ease-in-out 2s followersCount forwards;
+            animation-delay: 0.5s;
             counter-reset: num var(--num);
 
               &::after {
@@ -818,7 +803,8 @@ body {
                     font-weight: fonts.$medium-fw;
                     color: var(--black);
 
-                    animation: ease-in-out 3s followersCount1 forwards;
+                    animation: ease-in-out 2s followersCount forwards;
+                    animation-delay: 0.5s;
                     counter-reset: num2 var(--num2);
         
                       &::after {

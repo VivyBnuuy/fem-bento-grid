@@ -5,20 +5,14 @@
 .card3__graph__days-day:hover {
     cursor: pointer;
 
-    font-weight: fonts.$bold-fw;
+    font-weight: fonts.$bold-fw !important;
 }
 
-
-/*
 .card8__graph-container__followers:hover {
-    --num: 20620;
-    
+   
     cursor: text;
 }
 
-.card8__graph-container__followers-small-cont__span2:hover {
-    --num2: 89533;
-        
+.card8__graph-container__followers-small-cont__span2:hover {     
     cursor: text;
 }
-*/
