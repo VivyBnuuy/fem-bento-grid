@@ -22,6 +22,16 @@
   font-weight: 700;
 }
 
+.card8__graph-container__followers:hover {
+  --num: 20620;
+  cursor: text;
+}
+
+.card8__graph-container__followers-small-cont__span2:hover {
+  --num2: 89533;
+  cursor: text;
+}
+
 /* makes sizing simpler */
 *,
 *::before,
@@ -183,10 +193,11 @@ body {
 
 .card3 {
   grid-area: 1/4/3/5;
+  position: relative;
+  left: 0;
   max-width: 16rem;
   overflow: hidden;
   background-color: var(--purple-light);
-  transition: all 0.5s ease-in-out;
 }
 .card3__header {
   max-width: 12rem;
@@ -415,10 +426,12 @@ body {
 }
 .card5__socials-container {
   display: grid;
-  grid-template: max-content/repeat(2, auto);
+  grid-template: max-content/repeat(2, max-content);
   grid-column-gap: 0.875rem;
-  width: -moz-max-content;
-  width: max-content;
+  width: 31.25rem;
+  position: relative;
+  left: 0;
+  transition: left 0.5s ease-in-out;
 }
 .card5__socials-container__1, .card5__socials-container__2 {
   display: grid;
@@ -432,6 +445,7 @@ body {
   padding: 0.75rem 1.5rem 0.75rem 0.75rem;
   border-radius: 2rem;
   filter: drop-shadow(-0.625rem 0.625rem 1.5625rem rgba(0, 0, 0, 0.05));
+  pointer-events: none;
 }
 .card5__socials-container__1__name, .card5__socials-container__2__name {
   font-size: 1rem;
@@ -584,6 +598,11 @@ body {
   letter-spacing: -6%;
   font-weight: 500;
   color: var(--black);
+  transition: --num 1s;
+  counter-reset: num var(--num);
+}
+.card8__graph-container__followers::after {
+  content: counter(num);
 }
 .card8__graph-container__followers-percent {
   display: grid;
@@ -614,6 +633,7 @@ body {
   left: 4.0625rem;
   width: -moz-max-content;
   width: max-content;
+  width: 11.690625rem;
   border-radius: 2rem;
   padding: 0.75rem;
   background-color: var(--white);
@@ -635,11 +655,17 @@ body {
 }
 .card8__graph-container__followers-small-cont__span2 {
   grid-area: 2/2/3/3;
+  width: 3.3229125rem;
   font-size: 1.2rem;
   line-height: 90%;
   letter-spacing: -6%;
   font-weight: 500;
   color: var(--black);
+  transition: --num2 1s;
+  counter-reset: num2 var(--num2);
+}
+.card8__graph-container__followers-small-cont__span2::after {
+  content: counter(num2);
 }
 .card8__graph-container__followers-small-cont__percent {
   display: grid;
@@ -694,6 +720,16 @@ body {
   font-weight: 500;
 }
 
+@property --num {
+  syntax: "<integer>";
+  initial-value: 3495;
+  inherits: false;
+}
+@property --num2 {
+  syntax: "<integer>";
+  initial-value: 40697;
+  inherits: false;
+}
 @media screen and (max-width: 1066px) {
   .contents {
     display: grid;
@@ -895,6 +931,7 @@ body {
   }
   .card3__graph__days {
     grid-template: auto/repeat(7, max-content);
+    max-width: 16.84375rem;
   }
   .card3__graph__days-day {
     font-size: 0.75rem;

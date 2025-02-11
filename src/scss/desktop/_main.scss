@@ -166,13 +166,14 @@ body {
 .card3 {
     grid-area: 1 / 4 / 3 / 5;
 
+    position: relative;
+    left: 0;
+
     max-width: util.rem(256);
 
     overflow: hidden;
 
     background-color: var(--purple-light);
-
-    transition: all 0.5s ease-in-out;
 
     &__header {
         max-width: util.rem(192);
@@ -484,10 +485,15 @@ body {
 
     &__socials-container {
         display: grid;
-        grid-template: max-content / repeat(2, auto);
+        grid-template: max-content / repeat(2, max-content);
         grid-column-gap: util.rem(14);
 
-        width: max-content;
+        width: util.rem(500);
+
+        position: relative;
+        left: 0;
+
+        transition: left 0.5s ease-in-out;
 
         &__1, &__2 {
             display: grid;
@@ -505,6 +511,8 @@ body {
             border-radius: util.rem(32);
 
             filter: drop-shadow(util.rem(-10) util.rem(10) util.rem(25) rgba(0, 0, 0, 0.05));
+
+            pointer-events: none;
 
             &__name {
                 font-size: fonts.$small3;
@@ -706,6 +714,13 @@ body {
             font-weight: fonts.$medium-fw;
             color: var(--black);
 
+            transition: --num 1s;
+            counter-reset: num var(--num);
+
+              &::after {
+                content: counter(num);
+              }
+
             &-percent {
                 display: grid;
                 justify-content: center;
@@ -741,6 +756,7 @@ body {
                 left: util.rem(65);
 
                 width: max-content;
+                width: util.rem(187.05);
 
                 border-radius: util.rem(32);
 
@@ -770,11 +786,20 @@ body {
                 &__span2 {
                     grid-area: 2 / 2 / 3 / 3;
 
+                    width: util.rem(53.1666);
+
                     font-size: fonts.$small2;
                     line-height: fonts.$large-lh;
                     letter-spacing: fonts.$socials-ls;
                     font-weight: fonts.$medium-fw;
                     color: var(--black);
+
+                    transition: --num2 1s;
+                    counter-reset: num2 var(--num2);
+        
+                      &::after {
+                        content: counter(num2);
+                      }
                 }
 
                 &__percent {
@@ -847,4 +872,16 @@ body {
         line-height: fonts.$large-lh;
         font-weight: fonts.$medium-fw;
     }
+}
+
+@property --num {
+    syntax: '<integer>';
+    initial-value: 3495;
+    inherits: false;
+}
+
+@property --num2 {
+    syntax: '<integer>';
+    initial-value: 40697;
+    inherits: false;
 }

@@ -69,6 +69,8 @@
             &__days {
                 grid-template: auto/repeat(7, max-content);
 
+                max-width: util.rem(269.5);
+
                 &-day {
                     font-size: fonts.$very-small2;
                 }

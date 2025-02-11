@@ -7,3 +7,15 @@
 
     font-weight: fonts.$bold-fw;
 }
+
+.card8__graph-container__followers:hover {
+    --num: 20620;
+    
+    cursor: text;
+}
+
+.card8__graph-container__followers-small-cont__span2:hover {
+    --num2: 89533;
+        
+    cursor: text;
+}
