@@ -22,16 +22,19 @@
   font-weight: 700;
 }
 
+/*
 .card8__graph-container__followers:hover {
-  --num: 20620;
-  cursor: text;
+    --num: 20620;
+
+    cursor: text;
 }
 
 .card8__graph-container__followers-small-cont__span2:hover {
-  --num2: 89533;
-  cursor: text;
-}
+    --num2: 89533;
 
+    cursor: text;
+}
+*/
 /* makes sizing simpler */
 *,
 *::before,
@@ -66,6 +69,26 @@ video {
   max-width: 100%;
 }
 
+@property --num {
+  syntax: "<integer>";
+  initial-value: 3495;
+  inherits: false;
+}
+@property --num2 {
+  syntax: "<integer>";
+  initial-value: 40697;
+  inherits: false;
+}
+@keyframes followersCount1 {
+  0% {
+    --num: 3495;
+    --num2: 40697;
+  }
+  100% {
+    --num: 20620;
+    --num2: 89533;
+  }
+}
 body {
   background-color: var(--off-white);
   font-family: "DM Sans";
@@ -598,7 +621,7 @@ body {
   letter-spacing: -6%;
   font-weight: 500;
   color: var(--black);
-  transition: --num 1s;
+  animation: ease-in-out 3s followersCount1 forwards;
   counter-reset: num var(--num);
 }
 .card8__graph-container__followers::after {
@@ -661,7 +684,7 @@ body {
   letter-spacing: -6%;
   font-weight: 500;
   color: var(--black);
-  transition: --num2 1s;
+  animation: ease-in-out 3s followersCount1 forwards;
   counter-reset: num2 var(--num2);
 }
 .card8__graph-container__followers-small-cont__span2::after {
@@ -720,16 +743,6 @@ body {
   font-weight: 500;
 }
 
-@property --num {
-  syntax: "<integer>";
-  initial-value: 3495;
-  inherits: false;
-}
-@property --num2 {
-  syntax: "<integer>";
-  initial-value: 40697;
-  inherits: false;
-}
 @media screen and (max-width: 1066px) {
   .contents {
     display: grid;

@@ -2,6 +2,30 @@
 @use "../global/variables" as var;
 @use "../global/typography" as fonts;
 
+@property --num {
+    syntax: '<integer>';
+    initial-value: 3495;
+    inherits: false;
+}
+
+@property --num2 {
+    syntax: '<integer>';
+    initial-value: 40697;
+    inherits: false;
+}
+
+@keyframes followersCount1 {
+    0% {
+        --num: 3495;
+        --num2: 40697;
+    }
+
+    100% {
+        --num: 20620;
+        --num2: 89533;
+    }
+}
+
 body {
     background-color: var(--off-white);
 
@@ -19,7 +43,7 @@ body {
 }
 
 .card {
-    display:grid;
+    display: grid;
 
     border-radius: util.rem(8);
 
@@ -714,7 +738,7 @@ body {
             font-weight: fonts.$medium-fw;
             color: var(--black);
 
-            transition: --num 1s;
+            animation: ease-in-out 3s followersCount1 forwards;
             counter-reset: num var(--num);
 
               &::after {
@@ -794,7 +818,7 @@ body {
                     font-weight: fonts.$medium-fw;
                     color: var(--black);
 
-                    transition: --num2 1s;
+                    animation: ease-in-out 3s followersCount1 forwards;
                     counter-reset: num2 var(--num2);
         
                       &::after {
@@ -872,16 +896,4 @@ body {
         line-height: fonts.$large-lh;
         font-weight: fonts.$medium-fw;
     }
-}
-
-@property --num {
-    syntax: '<integer>';
-    initial-value: 3495;
-    inherits: false;
-}
-
-@property --num2 {
-    syntax: '<integer>';
-    initial-value: 40697;
-    inherits: false;
 }
