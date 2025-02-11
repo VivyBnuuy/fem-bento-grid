@@ -155,10 +155,6 @@ body {
   font-size: 1.2rem;
   margin: 0 0 3.125rem 0;
   padding: 1.0625rem 1.625rem;
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .card1__button__star {
   align-self: center;

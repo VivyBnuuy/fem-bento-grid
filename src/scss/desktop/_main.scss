@@ -87,9 +87,6 @@ body {
         margin: 0 0 util.rem(50) 0;
         padding: util.rem(17) util.rem(26);
 
-        pointer-events: none;
-        user-select: none;
-
         &__star {
             align-self: center;
 
