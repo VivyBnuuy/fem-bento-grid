@@ -1,7 +1,7 @@
 # Bento Grid
 ![image](https://github.com/user-attachments/assets/2180f153-ac6a-47f7-986d-9448c2877d7b)
 
-Hi! Welcome to the repository for my solution to this <a href="[https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj)" target="_blank">Frontend Mentor challenge</a>!
+Hi! Welcome to the repository for my solution to this <a href="https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa" target="_blank">Frontend Mentor challenge</a>!
 
 # Summary
 This was a really fun project to complete with CSS! I decided to recreate the images with CSS and I added some animations as well as made the graph interactable with some JavaScript. 
